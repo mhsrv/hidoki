@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22)
+project(hidoki)
+add_library(hidoki SHARED lib/interface/example.h lib/example_service.h src/example_service.cpp)
+target_link_libraries(hidoki PUBLIC async utils)
+target_include_directories(hidoki PUBLIC lib)
